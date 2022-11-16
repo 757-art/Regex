@@ -1,5 +1,12 @@
 export default class Validator {
   validateUsername(name) {
-    return name.match(/[\w0-9_-][^(0-9){0,3}]^[^0-9_-][^0-9_-]$/);
+    let regexp = /^[a-zA-Z]+[\w_-]*[a-zA-Z]$/gm;
+      return name.match(regexp);
   }
 }
+
+let user = new Validator();
+user.validateUsername("Arag09_rn");
+
+console.log()
+
